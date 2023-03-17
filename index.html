@@ -1,38 +1,44 @@
 <html>
-    <head>        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script>
-        <script src="https://unpkg.com/@ungap/url-search-params"></script>
-        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
-  
-    </head>
-    <script>
-
-    </script>
-    <body>
-        <button id="create_signaling_channel">Create Channel (Start Call)</button>
-        <br>
-        <h3>Audio Controls</h3>
-        <button id="start_stop_audio_video">Start Audio Video Stream</button>
-        <br>
-        <h3>Master Controls</h3>
-        <button id="join_call_master">Join call as master (call initiator) </button>
-        <button id="stop_call_master">End call as Master (call intiator ending)</button>
-        <br>
-        <h3>Viewer Controls</h3>
-        <button id="join_call_viewer">Join Call as Viewer (call reciever)</button>
-        <button id="stop_call_viewer">End call as Viewer (call ending)</button>
-        <br>
-        <h5>Caller View</h5>
-        <div class="video-container"><video id="remote-view" autoplay playsinline controls /></div>
-        <h5>Your View</h5>
-        <div class="video-container"><video id="local-view" autoplay playsinline controls muted/></div>
-    </body>
-    <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script> -->
-    <script src="https://unpkg.com/amazon-kinesis-video-streams-webrtc/dist/kvs-webrtc.min.js" type="module"></script>
-    <script src="./state.js" type="module"></script>
-    <script src="./rtcHandler.js" type="module"></script>
-    <script src="./masterKinesisClientSetup.js" type="module"></script>
-    <script src="./main.js" type="module"></script>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script>
+    <script src="https://unpkg.com/@ungap/url-search-params"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  </head>
+  <script></script>
+  <body>
+    <button id="create_signaling_channel">Create Channel (Start Call)</button>
+    <br />
+    <h3>Audio Controls</h3>
+    <button id="start_stop_audio_video">Start Audio Video Stream</button>
+    <br />
+    <h3>Master Controls</h3>
+    <button id="join_call_master">Join call as master (call initiator)</button>
+    <button id="stop_call_master">
+      End call as Master (call intiator ending)
+    </button>
+    <br />
+    <h3>Viewer Controls</h3>
+    <button id="join_call_viewer">Join Call as Viewer (call reciever)</button>
+    <button id="stop_call_viewer">End call as Viewer (call ending)</button>
+    <br />
+    <h5>Caller View</h5>
+    <div class="video-container">
+      <video id="remote-view" autoplay playsinline controls />
+    </div>
+    <h5>Your View</h5>
+    <div class="video-container">
+      <video id="local-view" autoplay playsinline controls muted />
+    </div>
+  </body>
+  <!-- <script src="https://sdk.amazonaws.com/js/aws-sdk-2.585.0.min.js"></script> -->
+  <script
+    src="https://unpkg.com/amazon-kinesis-video-streams-webrtc/dist/kvs-webrtc.min.js"
+    type="module"
+  ></script>
+  <script src="./state.js" type="module"></script>
+  <script src="./rtcHandler.js" type="module"></script>
+  <script src="./masterKinesisClientSetup.js" type="module"></script>
+  <script src="./main.js" type="module"></script>
 </html>
